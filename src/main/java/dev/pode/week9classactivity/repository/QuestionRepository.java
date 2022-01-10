@@ -23,7 +23,7 @@ public class QuestionRepository {
     }
 
     public Question getQuestionById(int id){
-        String sql = "SELECT * FROM person WHERE id=?";
+        String sql = "SELECT * FROM question WHERE id=?";
         return jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Question.class),id);
     }
 }
