@@ -6,3 +6,11 @@ CREATE TABLE IF NOT EXISTS question(
     description varchar(130) NOT NULL
 
     );
+
+
+CREATE TABLE IF NOT EXISTS answer(
+     id serial PRIMARY KEY,
+     text varchar(130) NOT NULL,
+     question_id serial,
+    foreign key(question_id) references question(id)
+    );
