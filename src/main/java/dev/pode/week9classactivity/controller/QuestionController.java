@@ -29,4 +29,10 @@ public class QuestionController {
                 .retrieve()
                 .bodyToMono(Question.class);
     }
+
+    @PostMapping
+    public Question saveQuestion(Question question){
+
+        return question;
+    }
 }
